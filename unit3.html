@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوحدة الثالثة: المصفوفات والمحددات</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+         :root {
+            --primary-navy: #001d3d;
+            --light-bg: #f8f9fa;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --accent-gold: #ffc300;
+        }
+        
+        [data-theme="dark"] {
+            --primary-navy: #ffd60a;
+            --light-bg: #000814;
+            --text-color: #e0e0e0;
+            --card-bg: #001d3d;
+            --accent-gold: #ffc300;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--light-bg) !important;
+            color: var(--text-color);
+            transition: 0.3s;
+            padding-bottom: 80px;
+        }
+        
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 25px;
+            text-decoration: none;
+        }
+        
+        .unit-header {
+            background: #001d3d;
+            color: white;
+            padding: 60px 20px 30px;
+            border-radius: 0 0 30px 30px;
+            border-bottom: 4px solid var(--accent-gold);
+        }
+        
+        .lesson-card {
+            background-color: var(--card-bg) !important;
+            color: var(--text-color) !important;
+            border: none;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .lesson-title {
+            background-color: rgba(0, 0, 0, 0.03);
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: bold;
+            color: var(--text-color);
+        }
+        
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            padding: 10px;
+        }
+        
+        .res-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 11px;
+            padding: 10px 5px;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+        
+        .res-btn:hover {
+            background: rgba(13, 110, 253, 0.1);
+        }
+        
+        .res-btn i {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        
+        .bi-play-circle-fill {
+            color: #dc3545;
+        }
+        
+        .bi-question-square-fill {
+            color: #ffc107;
+        }
+        
+        .bi-pencil-fill {
+            color: #198754;
+        }
+        
+        .parts-list {
+            background-color: rgba(0, 0, 0, 0.02);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .part-item {
+            display: block;
+            padding: 10px 20px;
+            color: var(--text-color);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 14px;
+            transition: 0.2s;
+        }
+        
+        .part-item:hover {
+            background: var(--accent-gold);
+            color: #001d3d;
+        }
+        
+        .part-item i {
+            margin-left: 10px;
+            color: #dc3545;
+        }
+        
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--card-bg);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        
+        .nav-item {
+            text-align: center;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 12px;
+        }
+        
+        .nav-item i {
+            font-size: 20px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="back-btn"><i class="bi bi-arrow-right-circle-fill"></i></a>
+
+    <header class="unit-header text-center">
+        <h4 class="fw-bold">الوحدة الثالثة: المصفوفات والمحددات</h4>
+    </header>
+
+    <main class="container mt-4">
+        <!-- بانر بلاي ليست اليوتيوب - في البداية -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <a href="https://youtube.com/playlist?list=PLeZ-zn9hRJvBZ-6M5OBqF4puM3Jxtofbi&si=9yGfouE6MP1uVuAP" target="_blank" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm p-3 text-center" style="background: linear-gradient(45deg, #ff0000, #cc0000); color: white; border-radius: 15px;">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="bi bi-play-btn-fill fs-2 me-3"></i>
+                            <div>
+                                <h6 class="mb-0 fw-bold">مشاهدة شرح الوحدة كاملة (YouTube)</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- الدرس 1: المصفوفة -->
+        <div class="lesson-card">
+            <div class="lesson-title">1. المصفوفة.</div>
+            <div class="resource-grid text-center">
+                <a class="res-btn" data-bs-toggle="collapse" href="#lesson1Parts" role="button">
+                    <i class="bi bi-play-circle-fill"></i>الفيديوهات
+                </a>
+                <a href="https://drive.google.com/file/d/1Y-HXm0hUPLOCe4Lxlkyf3l80VSHfWAOS/view?usp=drivesdk" class="res-btn"><i class="bi bi-question-square-fill"></i>أسئلة اختر </a>
+                <a href="https://forms.gle/txLxGa6wM8qpRbLeA" class="res-btn"><i class="bi bi-pencil-fill"></i>اختبر نفسك</a>
+            </div>
+            <div class="collapse parts-list" id="lesson1Parts">
+                <!-- 10 لقاءات -->
+                <a href="https://youtu.be/h0FShDRX25w?si=KvNth8zLf4k3nWUG" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الأول</a>
+                <a href="https://youtu.be/kmFMbSeBKYM?si=1ulPfo4PGnSe4CM" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الثاني</a>
+            </div>
+        </div>
+
+        <!-- الدرس 2: العمليات على المصفوفات -->
+        <div class="lesson-card">
+            <div class="lesson-title">2. العمليات على المصفوفات.</div>
+            <div class="resource-grid text-center">
+                <a class="res-btn" data-bs-toggle="collapse" href="#lesson2Parts" role="button">
+                    <i class="bi bi-play-circle-fill"></i>الفيديوهات
+                </a>
+                <a href="https://drive.google.com/file/d/1z70J4bABQrZukEY2dar4PeebyIzBKeqj/view?usp=drivesdk" class="res-btn"><i class="bi bi-question-square-fill"></i>أسئلة اختر </a>
+                <a href="https://forms.gle/6hpc34yGv3YCwt1V8" class="res-btn"><i class="bi bi-pencil-fill"></i>اختبر نفسك</a>
+            </div>
+            <div class="collapse parts-list" id="lesson2Parts">
+                <a href="https://youtu.be/mIkzb3sx8Jg?si=aQepLX6OPSIB4G2T" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الأول</a>
+                <a href="https://youtu.be/U5wrlfSbERM?si=QGTdcd-zjH-wY6D6" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الثاني</a>
+                <a href="_https://youtu.be/kE5vtJoSzCU?si=wDQSeD2F39Y6b1p" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الثالث</a>
+
+            </div>
+        </div>
+
+        <!-- الدرس 3: المحددات -->
+        <div class="lesson-card">
+            <div class="lesson-title">3. المحددات.</div>
+            <div class="resource-grid text-center">
+                <a class="res-btn" data-bs-toggle="collapse" href="#lesson3Parts" role="button">
+                    <i class="bi bi-play-circle-fill"></i>الفيديوهات
+                </a>
+                <a href="https://drive.google.com/file/d/1y8Dr8Gqb1xZYtF5hUN3tXknr87UG3how/view?usp=drivesdk" class="res-btn"><i class="bi bi-question-square-fill"></i>أسئلة اختر </a>
+                <a href="https://forms.gle/fC1DceQYp6wmKb8g6" class="res-btn"><i class="bi bi-pencil-fill"></i>اختبر نفسك</a>
+            </div>
+            <div class="collapse parts-list" id="lesson3Parts">
+                <a href="https://youtu.be/cbwb5iP6tp8?si=2GCDzpJ2K3WdgevS" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الأول</a>
+                <a href="https://youtu.be/gh35pqsWqqI?si=pk5Rv1qs_mVwaIAN" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الثاني</a>
+
+            </div>
+        </div>
+
+        <!-- الدرس 4: النظير الضربي -->
+        <div class="lesson-card">
+            <div class="lesson-title">4. النظير الضربي للمصفوفة المربعة.</div>
+            <div class="resource-grid text-center">
+                <a class="res-btn" data-bs-toggle="collapse" href="#lesson4Parts" role="button">
+                    <i class="bi bi-play-circle-fill"></i>الفيديوهات
+                </a>
+                <a href="https://drive.google.com/file/d/1CxPELTrZXoimjnzJucocI1atJzyIHunF/view?usp=drivesdk" class="res-btn"><i class="bi bi-question-square-fill"></i>أسئلة اختر </a>
+                <a href="https://forms.gle/44ohj3EZLdx3GFzR8" class="res-btn"><i class="bi bi-pencil-fill"></i>اختبر نفسك</a>
+            </div>
+            <div class="collapse parts-list" id="lesson4Parts">
+                <a href="https://youtu.be/lku_6cZqM-k?si=R7fixas0gEiClq_a" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الأول</a>
+                <a href="https://youtu.be/w_MuhvnHDc4?si=imox_o1X2tLkcF2P" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الثاني</a>
+            </div>
+        </div>
+
+        <!-- الدرس 5: حل أنظمة المعادلات -->
+        <div class="lesson-card">
+            <div class="lesson-title">5. حل أنظمة المعادلات الخطية باستخدام المصفوفات.</div>
+            <div class="resource-grid text-center">
+                <a class="res-btn" data-bs-toggle="collapse" href="#lesson5Parts" role="button">
+                    <i class="bi bi-play-circle-fill"></i>الفيديوهات
+                </a>
+                <a href="https://drive.google.com/file/d/1NI1nf1zHNXyu8HJX_gmZ_Vp-gXp-mdTm/view?usp=drivesdk" class="res-btn"><i class="bi bi-question-square-fill"></i>أسئلة اختر </a>
+                <a href="https://forms.gle/9u1JLJNy652E2YQ78" class="res-btn"><i class="bi bi-pencil-fill"></i>اختبر نفسك</a>
+            </div>
+            <div class="collapse parts-list" id="lesson5Parts">
+                <a href="https://youtu.be/umV6H2qAe6s?si=M8g3B71V8vJoREju" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الأول</a>
+                <a href="https://youtu.be/2p_5aQEaamE?si=j-OJfwdoVuqvfvTi" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الثاني</a>
+                <a href="https://youtu.be/t2CUtAoDGC0?si=QSOQ850Md0vUXjc9" class="part-item"><i class="bi bi-play-fill"></i>ورقة العمل</a>
+            </div>
+        </div>
+
+        <!-- قسم الإجابات النموذجية - في النهاية -->
+        <div class="row mt-5 mb-4">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm p-4 text-center" style="background-color: var(--card-bg); border: 2px dashed #198754 !important; border-radius: 20px;">
+                    <i class="bi bi-check-circle-fill display-5 text-success mb-2"></i>
+                    <h5 class="fw-bold">انتهيت من الدراسة؟</h5>
+                    <p class="text-muted small">هنا تجد الإجابات النموذجية لجميع اختبارات دروس هذه الوحدة</p>
+                    <a href="https://drive.google.com/drive/folders/1gnwo5D83DS0R4-SOclUUilJjVmUoc3Uc?usp=drive_link" target="_blank" class="btn btn-success btn-lg rounded-pill px-5 fw-bold shadow-sm">
+                        <i class="bi bi-folder-check"></i> عرض الإجابات النموذجية
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><i class="bi bi-house-door-fill"></i>الرئيسية</a>
+        <a href="exams.html" class="nav-item"><i class="bi bi-file-earmark-check-fill"></i>الاختبارات</a>
+        <a href="about.html" class="nav-item"><i class="bi bi-person-badge-fill"></i>عنّا</a>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</body>
+
+</html>

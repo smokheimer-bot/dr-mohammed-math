@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوحدة الخامسة: التكامل المحدود</title>
+
+    <!-- الخط والأيقونات والستايل -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+         :root {
+            --primary-navy: #001d3d;
+            --light-bg: #f8f9fa;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --accent-gold: #ffc300;
+        }
+        
+        [data-theme="dark"] {
+            --primary-navy: #ffd60a;
+            --light-bg: #000814;
+            --text-color: #e0e0e0;
+            --card-bg: #001d3d;
+            --accent-gold: #ffc300;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--light-bg) !important;
+            color: var(--text-color);
+            transition: 0.3s;
+            padding-bottom: 80px;
+        }
+        
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 25px;
+            text-decoration: none;
+        }
+        
+        .unit-header {
+            background: #001d3d;
+            color: white;
+            padding: 60px 20px 30px;
+            border-radius: 0 0 30px 30px;
+            border-bottom: 4px solid var(--accent-gold);
+        }
+        
+        .lesson-card {
+            background-color: var(--card-bg) !important;
+            color: var(--text-color) !important;
+            border: none;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .lesson-title {
+            background-color: rgba(0, 0, 0, 0.03);
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: bold;
+            color: var(--text-color);
+        }
+        
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            padding: 10px;
+        }
+        
+        .res-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 11px;
+            padding: 10px 5px;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+        
+        .res-btn:hover {
+            background: rgba(13, 110, 253, 0.1);
+        }
+        
+        .res-btn i {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        
+        .bi-play-circle-fill {
+            color: #dc3545;
+        }
+        
+        .bi-question-square-fill {
+            color: #ffc107;
+        }
+        
+        .bi-pencil-fill {
+            color: #198754;
+        }
+        
+        .parts-list {
+            background-color: rgba(0, 0, 0, 0.02);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .part-item {
+            display: block;
+            padding: 10px 20px;
+            color: var(--text-color);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 14px;
+            transition: 0.2s;
+        }
+        
+        .part-item:hover {
+            background: var(--accent-gold);
+            color: #001d3d;
+        }
+        
+        .part-item i {
+            margin-left: 10px;
+            color: #dc3545;
+        }
+        
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--card-bg);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        
+        .nav-item {
+            text-align: center;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 12px;
+        }
+        
+        .nav-item i {
+            font-size: 20px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="back-btn"><i class="bi bi-arrow-right-circle-fill"></i></a>
+
+    <header class="unit-header text-center">
+        <h4 class="fw-bold">الوحدة الخامسة: التكامل المحدود</h4>
+    </header>
+
+    <main class="container mt-4">
+        <!-- بانر بلاي ليست اليوتيوب - في البداية -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <a href="https://youtube.com/playlist?list=PLeZ-zn9hRJvAbvy8ohhjxy5naKFbikYWP&si=g0FsXE42EIwdCmgu" target="_blank" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm p-3 text-center" style="background: linear-gradient(45deg, #ff0000, #cc0000); color: white; border-radius: 15px;">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="bi bi-play-btn-fill fs-2 me-3"></i>
+                            <div>
+                                <h6 class="mb-0 fw-bold">مشاهدة شرح الوحدة كاملة (YouTube)</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- الدرس 1: التجزئة ومجموع ريمان -->
+        <div class="lesson-card">
+            <div class="lesson-title">1. التجزئة ومجموع ريمان.</div>
+            <div class="resource-grid text-center">
+                <a class="res-btn" data-bs-toggle="collapse" href="#lesson1Parts" role="button">
+                    <i class="bi bi-play-circle-fill"></i>الفيديوهات
+                </a>
+                <a href="https://drive.google.com/file/d/1ou6bGFnJd9b8U3qP_zaIH2WWViKdHwaH/view?usp=drivesdk" class="res-btn"><i class="bi bi-question-square-fill"></i>أسئلة اختر </a>
+                <a href="https://forms.gle/17QQzHgVvDR6ysH17" class="res-btn"><i class="bi bi-pencil-fill"></i>اختبر نفسك</a>
+            </div>
+            <div class="collapse parts-list" id="lesson1Parts">
+                <!-- 10 لقاءات جاهزة -->
+                <a href="https://youtu.be/pQxBgnxgJyM?si=sMeAuSNElHUObTPc" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الأول</a>
+                <a href="https://youtu.be/V7D9yU-mpsk?si=jb21itqe2c4Bh2bZ" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الثاني</a>
+            </div>
+        </div>
+
+        <!-- الدرس 2: التكامل المحدود -->
+        <div class="lesson-card">
+            <div class="lesson-title">2. التكامل المحدود.</div>
+            <div class="resource-grid text-center">
+                <a class="res-btn" data-bs-toggle="collapse" href="#lesson2Parts" role="button">
+                    <i class="bi bi-play-circle-fill"></i>الفيديوهات
+                </a>
+                <a href="https://drive.google.com/file/d/1Kor-gEBayyv0VZl3_6HUey9rOeDITpVK/view?usp=drivesdk" class="res-btn"><i class="bi bi-question-square-fill"></i>أسئلة اختر </a>
+                <a href="https://forms.gle/868XrL9bao3pY3fA9" class="res-btn"><i class="bi bi-pencil-fill"></i>اختبر نفسك</a>
+            </div>
+            <div class="collapse parts-list" id="lesson2Parts">
+                <a href="https://youtu.be/V2JSQW7rTMI?si=PKsPeoPrVuOVFymQ" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الأول</a>
+                <a href="https://youtu.be/orU5STkOKco?si=ryORK9IVN8G5hWJC" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الثاني</a>
+            </div>
+        </div>
+
+        <!-- الدرس 3: العلاقة بين التفاضل والتكامل -->
+        <div class="lesson-card">
+            <div class="lesson-title">3. العلاقة بين التفاضل والتكامل.</div>
+            <div class="resource-grid text-center">
+                <a class="res-btn" data-bs-toggle="collapse" href="#lesson3Parts" role="button">
+                    <i class="bi bi-play-circle-fill"></i>الفيديوهات
+                </a>
+                <a href="https://drive.google.com/file/d/15d2UG1C7sVi6KJNp5OE5Rh1rIyuq8C6b/view?usp=drivesdk" class="res-btn"><i class="bi bi-question-square-fill"></i>أسئلة اختر </a>
+                <a href="https://forms.gle/fBWLV9JWvZCg8KSJ9" class="res-btn"><i class="bi bi-pencil-fill"></i>اختبر نفسك</a>
+            </div>
+            <div class="collapse parts-list" id="lesson3Parts">
+                <a href="https://youtu.be/BjGmQ4Faxy8?si=0zJrQDl4AZIpuVEX" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الأول</a>
+                <a href="https://youtu.be/okQ7ZNOMe6Y?si=fR_qUGNnNhYfon64" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الثاني</a>
+            </div>
+        </div>
+
+        <!-- الدرس 4: خصائص التكامل المحدود -->
+        <div class="lesson-card">
+            <div class="lesson-title">4. خصائص التكامل المحدود.</div>
+            <div class="resource-grid text-center">
+                <a class="res-btn" data-bs-toggle="collapse" href="#lesson4Parts" role="button">
+                    <i class="bi bi-play-circle-fill"></i>الفيديوهات
+                </a>
+                <a href="https://drive.google.com/file/d/1Pvlw7tZ6T2UtigFNpdjts8B-uIclvafm/view?usp=drivesdk" class="res-btn"><i class="bi bi-question-square-fill"></i>أسئلة اختر </a>
+                <a href="https://forms.gle/VP4dHPiAiP4Y4wK39" class="res-btn"><i class="bi bi-pencil-fill"></i>اختبر نفسك</a>
+            </div>
+            <div class="collapse parts-list" id="lesson4Parts">
+                <a href="https://youtu.be/nN1PEH_horI?si=TBGBx6ujtmbv7oRs" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الأول</a>
+                <a href="https://youtu.be/B0_qUt0JrHA?si=qpGpk6NQF3gFzgQ1" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الثاني</a>
+                <a href="https://youtu.be/6zW7ixC3w08?si=iGAf7CWHqu5FQb7Z" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الثالث</a>
+            </div>
+        </div>
+
+        <!-- الدرس 5: تطبيقات التكامل المحدود -->
+        <div class="lesson-card">
+            <div class="lesson-title">5. تطبيقات التكامل المحدود.</div>
+            <div class="resource-grid text-center">
+                <a class="res-btn" data-bs-toggle="collapse" href="#lesson5Parts" role="button">
+                    <i class="bi bi-play-circle-fill"></i>الفيديوهات
+                </a>
+                <a href="https://drive.google.com/file/d/1qBEUI6H3JcSK_H_Y508a3T3JAWnujvu-/view?usp=drivesdk" class="res-btn"><i class="bi bi-question-square-fill"></i>أسئلة اختر </a>
+                <a href="https://forms.gle/pBoXptyQFwbX1HNt6" class="res-btn"><i class="bi bi-pencil-fill"></i>اختبر نفسك</a>
+            </div>
+            <div class="collapse parts-list" id="lesson5Parts">
+                <a href="https://youtu.be/_sHY9OI9TDY?si=mww0ZNp8PJmR3kfb" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الأول</a>
+                <a href="https://youtu.be/bXk9B5rzBSA?si=MG-_eRnyS8szZ5Yf" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الثاني</a>
+                <a href="#" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الثالث</a>
+                <a href="#" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الرابع</a>
+                <a href="#" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الخامس</a>
+                <a href="#" class="part-item"><i class="bi bi-play-fill"></i> اللقاء السادس</a>
+                <a href="#" class="part-item"><i class="bi bi-play-fill"></i> اللقاء السابع</a>
+                <a href="#" class="part-item"><i class="bi bi-play-fill"></i> اللقاء الثامن</a>
+                <a href="#" class="part-item"><i class="bi bi-play-fill"></i> اللقاء التاسع</a>
+                <a href="#" class="part-item"><i class="bi bi-play-fill"></i> اللقاء العاشر</a>
+            </div>
+        </div>
+        <!-- قسم الإجابات النموذجية - في النهاية -->
+        <div class="row mt-5 mb-4">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm p-4 text-center" style="background-color: var(--card-bg); border: 2px dashed #198754 !important; border-radius: 20px;">
+                    <i class="bi bi-check-circle-fill display-5 text-success mb-2"></i>
+                    <h5 class="fw-bold">انتهيت من الدراسة؟</h5>
+                    <p class="text-muted small">هنا تجد الإجابات النموذجية لجميع اختبارات دروس هذه الوحدة</p>
+                    <a href="https://drive.google.com/drive/folders/1xRHQwBD7G2bMkcdnpoNVbsN7i4TSNUKW?usp=drive_link" target="_blank" class="btn btn-success btn-lg rounded-pill px-5 fw-bold shadow-sm">
+                        <i class="bi bi-folder-check"></i> عرض الإجابات النموذجية
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><i class="bi bi-house-door-fill"></i>الرئيسية</a>
+        <a href="exams.html" class="nav-item"><i class="bi bi-file-earmark-check-fill"></i>الاختبارات</a>
+        <a href="about.html" class="nav-item"><i class="bi bi-person-badge-fill"></i>عنّا</a>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</body>
+
+</html>

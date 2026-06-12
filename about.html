@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عنّا | منصة د. محمد أبو الروس</title>
+
+    <!-- الخطوط والأيقونات -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+         :root {
+            --primary-navy: #001d3d;
+            --accent-gold: #ffc300;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #222;
+        }
+        
+        [data-theme="dark"] {
+            --bg-color: #000814;
+            --card-bg: #001d3d;
+            --text-color: #ffffff;
+            /* أبيض صريح لأقصى وضوح */
+            --accent-gold: #ffc300;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-color) !important;
+            color: var(--text-color) !important;
+            transition: 0.3s;
+            padding-bottom: 80px;
+        }
+        /* حل مشكلة النصوص الرمادية في الليل */
+        
+        [data-theme="dark"] .text-muted {
+            color: var(--accent-gold) !important;
+            /* نصوص فرعية ذهبية في الليل */
+        }
+        
+        .top-banner {
+            background: #001d3d;
+            height: 160px;
+            border-radius: 0 0 40px 40px;
+            border-bottom: 4px solid var(--accent-gold);
+        }
+        
+        .about-card {
+            background-color: var(--card-bg) !important;
+            color: var(--text-color) !important;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-top: -80px;
+            border: none;
+        }
+        
+        .profile-img-circle {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: #f1f1f1;
+            margin: -55px auto 15px;
+            border: 6px solid var(--card-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .social-btn {
+            border-radius: 15px;
+            padding: 12px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white !important;
+            /* النص دايماً أبيض للأزرار */
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+            border: none;
+        }
+        
+        .social-btn:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+            color: white !important;
+        }
+        
+        .btn-fb {
+            background: #1877f2;
+        }
+        
+        .btn-tg {
+            background: #229ED9;
+        }
+        
+        .btn-yt {
+            background: #ff0000;
+        }
+        
+        .btn-wa {
+            background: #25d366;
+        }
+        
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--card-bg) !important;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+        
+        .nav-item {
+            text-align: center;
+            color: var(--text-color) !important;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        
+        .nav-item i {
+            font-size: 22px;
+            display: block;
+        }
+        
+        .nav-item.active {
+            color: var(--accent-gold) !important;
+            font-weight: bold;
+        }
+        
+        h4,
+        h6,
+        p {
+            color: var(--text-color) !important;
+        }
+    </style>
+</head>
+
+<body data-theme="light">
+
+    <div class="top-banner"></div>
+
+    <main class="container">
+        <div class="card about-card p-4 text-center">
+            <div class="profile-img-circle">
+                <!-- صورة الدكتور (تأكدي من وجود الملف في نفس المجلد) -->
+                <img src="doctor.jpg" alt="د. محمد أبو الروس" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <h4 class="fw-bold mb-1">د. محمد عبد المحسن أبو الروس</h4>
+            <p class="text-muted small mb-2">مدرس مادة الرياضيات - الفرع العلمي</p>
+            <p class="text-muted small mb-3">دكتوراه مناهج وطرق تدريس</p>
+
+            <p class="px-2" style="font-size: 15px; line-height: 1.8;">
+                نرحب بكم في منصتنا التعليمية المتخصصة، حيث نسعى لتوفير شرح مبسط وعميق لمنهاج الرياضيات الفلسطيني، لمساعدة طلابنا في نيل الدرجات العليا.
+            </p>
+
+            <hr class="my-4" style="opacity: 0.2; background-color: var(--text-color);">
+
+            <h6 class="fw-bold mb-3">انضم لمجتمعاتنا التعليمية:</h6>
+
+            <div class="d-grid">
+                <a href="https://www.facebook.com/share/g/1BKtpAsx9H/" target="_blank" class="social-btn btn-fb"><i class="bi bi-facebook me-2"></i> مجموعة الفيسبوك </a>
+                <a href="https://t.me/aboanas104" target="_blank" class="social-btn btn-tg"><i class="bi bi-telegram me-2"></i> قناة التليجرام </a>
+                <a href="https://youtube.com/@mohaboanas6494?si=X2Vh4kIgPp9mCpfo" target="_blank" class="social-btn btn-yt"><i class="bi bi-youtube me-2"></i> قناة اليوتيوب للشروحات</a>
+                <a href="https://wa.me/972599687776" target="_blank" class="social-btn btn-wa"><i class="bi bi-whatsapp me-2"></i> تواصل مباشر (واتساب)</a>
+            </div>
+        </div>
+
+
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><i class="bi bi-house-door-fill"></i>الرئيسية</a>
+        <a href="exams.html" class="nav-item"><i class="bi bi-file-earmark-check-fill"></i>الاختبارات</a>
+        <a href="about.html" class="nav-item active"><i class="bi bi-person-badge-fill"></i>عنّا</a>
+    </nav>
+
+    <script>
+        // فحص وتطبيق الوضع الليلي فوراً عند تحميل الصفحة
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</body>
+
+</html>
